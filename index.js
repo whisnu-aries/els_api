@@ -23,7 +23,6 @@ app.use(limiter);
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.multipart());
 
 app.get("/", appMiddleware, (req, res) => {
   res.send("Welcome home!");
