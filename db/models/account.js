@@ -7,6 +7,14 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: "accountId",
         onDelete: "CASCADE",
       });
+      Account.hasMany(models.PasswordReset, {
+        foreignKey: "accountId",
+        onDelete: "CASCADE",
+      });
+      Account.hasOne(models.User, {
+        foreignKey: "accountId",
+        onDelete: "CASCADE",
+      });
     }
   }
   Account.init(
