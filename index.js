@@ -1,4 +1,5 @@
 const express = require("express");
+const { appMiddleware } = require("./middleware/index.js");
 const db = require("./db/models/index.js");
 
 require("dotenv").config();
@@ -6,8 +7,12 @@ require("dotenv").config();
 const app = express();
 const port = process.env.APP_PORT;
 
-app.get("/", (req, res) => {
+app.get("/", appMiddleware, (req, res) => {
   res.send("Welcome home!");
+});
+
+app.get("/status", (req, res) => {
+  res.send("API is running!");
 });
 
 db.sequelize
