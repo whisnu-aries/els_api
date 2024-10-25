@@ -1,8 +1,13 @@
 {
-  "welcome": "EN ASU",
+  "status": "API is running!",
+
   "fieldEmailIsRequired": "Email is required.",
   "fieldEmailIsEmail": "This is not a valid email.",
   "fieldPasswordRequired": "Password is required.",
   "fieldPasswordIsNotMatch": "Password is and password confirmation is not match.",
-  "fieldPasswordLengthMin": "Password minimal 6 characters."
+  "fieldPasswordLengthMin": "Password minimal 6 characters.",
+
+  "authAccountNotFound": "Email is not registered!",
+  "authInvalidPassword": "The password you entered is incorrect!",
+  "authServerError": "There's something wrong during login process!"
 }

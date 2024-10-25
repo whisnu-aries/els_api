@@ -1,4 +1,4 @@
-const locales = require("../locales");
+const locales = require("../locales/locales");
 
 const langMiddleware = (req, res, next) => {
   const lang = req.header("lang") || "en";

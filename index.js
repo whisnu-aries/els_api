@@ -3,11 +3,10 @@ const rateLimit = require("express-rate-limit");
 const helmet = require("helmet");
 const cors = require("cors");
 const { appMiddleware, langMiddleware } = require("./middleware/index");
-const locales = require("./locales");
+const locales = require("./locales/locales");
 
 require("dotenv").config();
 
-// const db = require("./db/models/index.js");
 const routes = require("./routes/index");
 
 const limiter = rateLimit({
@@ -27,19 +26,13 @@ app.use(locales.init);
 app.use(langMiddleware);
 
 app.get("/status", (req, res) => {
-  res.send("API is running!");
+  return res.status(200).json({
+    status: "OK",
+    message: req.__("status"),
+  });
 });
 
 app.use("/", appMiddleware, routes);
-
-// db.sequelize
-//   .authenticate()
-//   .then(() => {
-//     console.log("Koneksi ke database berhasil.");
-//   })
-//   .catch((err) => {
-//     console.error("Tidak dapat terhubung ke database:", err);
-//   });
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
