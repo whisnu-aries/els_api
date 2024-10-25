@@ -31,6 +31,7 @@ module.exports = {
       phoneNumber: {
         allowNull: false,
         type: Sequelize.STRING,
+        unique: true,
       },
       gender: {
         type: Sequelize.ENUM("Male", "Female"),
