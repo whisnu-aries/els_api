@@ -65,7 +65,7 @@ router.post("/", loginValidation, async (req, res) => {
     console.error(error);
     return res
       .status(500)
-      .json({ success: false, error_msg: req.__("authServerError") });
+      .json({ success: false, error_msg: req.__("authLoginServerError") });
   }
 });
 
