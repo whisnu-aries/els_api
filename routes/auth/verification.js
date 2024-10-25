@@ -16,6 +16,13 @@ router.get("/:token", async (req, res) => {
       transaction,
     });
 
+    if (!verification) {
+      return res.status(404).json({
+        success: false,
+        error_msg: req.__("authRequestNotFound"),
+      });
+    }
+
     if (verification.usedAt || verification.Account.verifiedAt) {
       return res.status(422).json({
         success: false,
@@ -26,7 +33,7 @@ router.get("/:token", async (req, res) => {
     if (isNowAfterExpired(verification.expiredAt)) {
       return res.status(422).json({
         success: false,
-        error_msg: req.__("authVerificationIsExpired"),
+        error_msg: req.__("authTokenIsExpired"),
       });
     }
 

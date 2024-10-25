@@ -15,8 +15,11 @@
   "authLoginServerError": "Terjadi kesalahan dalam proses login!",
   "authRegisterEmailIsRegistered": "Email sudah terdaftar!",
   "authRegisterPhoneNumberIsRegistered": "Nomor telepon sudah terdaftar!",
+  "authRequestNotFound": "Tidak dapat menemukan permintaan anda!.",
+  "authTokenIsExpired": "Token sudah kadarluasa! Silahkan buat permintaan baru.",
   "authRegisterServerError": "Terjadi kesalahan dalam proses registrasi!",
   "authVerificationIsUsed": "Token sudah digunakan / Akun sudah di verifikasi!.",
-  "authVerificationIsExpired": "Token sudah kadarluasa! Silahkan buat permintaan baru.",
-  "authVerificationServerError": "Terjadi kesalahan dalam proses verifikasi!"
+  "authVerificationServerError": "Terjadi kesalahan dalam proses verifikasi!",
+  "authForgotPasswordServerError": "Terjadi kesalahan dalam proses lupa password!",
+  "authResetPasswordServerError": "Terjadi kesalahan dalam proses reset password!"
 }
