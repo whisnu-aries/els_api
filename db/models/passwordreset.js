@@ -3,7 +3,7 @@ const { Model } = require("sequelize");
 module.exports = (sequelize, DataTypes) => {
   class PasswordReset extends Model {
     static associate(models) {
-      AccountVerification.belongsTo(models.Account, {
+      PasswordReset.belongsTo(models.Account, {
         foreignKey: "accountId",
       });
     }
