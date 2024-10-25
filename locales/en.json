@@ -1,0 +1,8 @@
+{
+  "welcome": "EN ASU",
+  "fieldEmailIsRequired": "Email is required.",
+  "fieldEmailIsEmail": "This is not a valid email.",
+  "fieldPasswordRequired": "Password is required.",
+  "fieldPasswordIsNotMatch": "Password is and password confirmation is not match.",
+  "fieldPasswordLengthMin": "Password minimal 6 characters."
+}

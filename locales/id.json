@@ -1,0 +1,8 @@
+{
+  "welcome": "ID BABI",
+  "fieldEmailIsRequired": "Email harus diisi.",
+  "fieldEmailIsEmail": "Ini bukan email yang valid.",
+  "fieldPasswordRequired": "Password harus diisi.",
+  "fieldPasswordIsNotMatch": "Password dan konfirmasi password tidak cocok.",
+  "fieldPasswordLengthMin": "Password harus memiliki minimal 6 karakter."
+}
