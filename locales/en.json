@@ -1,13 +1,19 @@
 {
   "status": "API is running!",
-
   "fieldEmailIsRequired": "Email is required.",
   "fieldEmailIsEmail": "This is not a valid email.",
   "fieldPasswordRequired": "Password is required.",
   "fieldPasswordIsNotMatch": "Password is and password confirmation is not match.",
   "fieldPasswordLengthMin": "Password minimal 6 characters.",
-
+  "fieldNameIsRequired": "Name is required.",
+  "fieldPhoneNumberIsRequired": "Phone number is required.",
+  "fieldPhoneNumberLengthMin": "Phone number minimal 10 characters.",
+  "fieldBirthdayIsRequired": "Birthday is required.",
+  "fieldDateOfBirthIsNotValid": "Birthday is not valid.",
   "authAccountNotFound": "Email is not registered!",
   "authInvalidPassword": "The password you entered is incorrect!",
-  "authServerError": "There's something wrong during login process!"
+  "authLoginServerError": "There's something wrong during login process!",
+  "authRegisterEmailIsRegistered": "Email is already registered!",
+  "authRegisterPhoneNumberIsRegistered": "Phone number is already registered!",
+  "authRegisterServerError": "There's something wrong during registration process!"
 }

@@ -1,13 +1,19 @@
 {
   "status": "API sedang berjalan!",
-
   "fieldEmailIsRequired": "Email harus diisi.",
   "fieldEmailIsEmail": "Ini bukan email yang valid.",
   "fieldPasswordRequired": "Password harus diisi.",
   "fieldPasswordIsNotMatch": "Password dan konfirmasi password tidak cocok.",
-  "fieldPasswordLengthMin": "Password harus memiliki minimal 6 karakter.",
-
+  "fieldPasswordLengthMin": "Password harus minimal 6 karakter.",
+  "fieldNameIsRequired": "Nama harus diisi.",
+  "fieldPhoneNumberIsRequired": "Nomor telepon harus diisi.",
+  "fieldPhoneNumberLengthMin": "Nomor telepon minimal 10 karakter.",
+  "fieldBirthdayIsRequired": "Tanggal lahir harus diisi.",
+  "fieldDateOfBirthIsNotValid": "Tanggal lahir yang diisi tidak valid.",
   "authAccountNotFound": "Email tidak terdaftar!",
   "authInvalidPassword": "Kata sandi yang Anda masukkan salah!",
-  "authServerError": "Terjadi kesalahan dalam proses login!"
+  "authLoginServerError": "Terjadi kesalahan dalam proses login!",
+  "authRegisterEmailIsRegistered": "Email sudah terdaftar!",
+  "authRegisterPhoneNumberIsRegistered": "Nomor telepon sudah terdaftar!",
+  "authRegisterServerError": "Terjadi kesalahan dalam proses registrasi!"
 }
