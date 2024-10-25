@@ -3,7 +3,13 @@ const { v4: uuidV4 } = require("uuid");
 const bcrypt = require("bcrypt");
 const { body, validationResult } = require("express-validator");
 
-const { sequelize, Account, User } = require("../../db/models");
+const {
+  sequelize,
+  Account,
+  AccountVerification,
+  User,
+} = require("../../db/models");
+const { addOneDay } = require("../../utils/date_time_utils");
 
 const router = express.Router();
 
@@ -45,7 +51,7 @@ router.post("/", registerValidation, async (req, res) => {
     birthday,
   } = req.body;
   const errors = validationResult(req);
-  let transaction;
+  const transaction = await sequelize.transaction();
 
   if (!errors.isEmpty()) {
     const translatedErrors = errors.array().map((err) => ({
@@ -56,8 +62,6 @@ router.post("/", registerValidation, async (req, res) => {
   }
 
   try {
-    transaction = await sequelize.transaction();
-
     if (password !== confirmation_password) {
       return res.status(404).json({
         success: false,
@@ -107,6 +111,15 @@ router.post("/", registerValidation, async (req, res) => {
         name,
         phoneNumber: phone_number,
         birthday,
+      },
+      { transaction }
+    );
+
+    await AccountVerification.create(
+      {
+        accountId: account.id,
+        token: uuidV4(),
+        expiredAt: addOneDay(new Date()),
       },
       { transaction }
     );

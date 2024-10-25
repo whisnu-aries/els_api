@@ -18,6 +18,7 @@ module.exports = (sequelize, DataTypes) => {
     {
       sequelize,
       modelName: "AccountVerification",
+      tableName: "account_verifications",
     }
   );
   return AccountVerification;

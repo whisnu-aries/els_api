@@ -15,5 +15,8 @@
   "authLoginServerError": "Terjadi kesalahan dalam proses login!",
   "authRegisterEmailIsRegistered": "Email sudah terdaftar!",
   "authRegisterPhoneNumberIsRegistered": "Nomor telepon sudah terdaftar!",
-  "authRegisterServerError": "Terjadi kesalahan dalam proses registrasi!"
+  "authRegisterServerError": "Terjadi kesalahan dalam proses registrasi!",
+  "authVerificationIsUsed": "Token sudah digunakan / Akun sudah di verifikasi!.",
+  "authVerificationIsExpired": "Token sudah kadarluasa! Silahkan buat permintaan baru.",
+  "authVerificationServerError": "Terjadi kesalahan dalam proses verifikasi!"
 }

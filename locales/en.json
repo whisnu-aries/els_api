@@ -15,5 +15,8 @@
   "authLoginServerError": "There's something wrong during login process!",
   "authRegisterEmailIsRegistered": "Email is already registered!",
   "authRegisterPhoneNumberIsRegistered": "Phone number is already registered!",
-  "authRegisterServerError": "There's something wrong during registration process!"
+  "authRegisterServerError": "There's something wrong during registration process!",
+  "authVerificationIsUsed": "Token is already used / Account already verified!.",
+  "authVerificationIsExpired": "Token is already expired! Please make a new verification request.",
+  "authVerificationServerError": "There's something wrong during verification process!"
 }
