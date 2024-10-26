@@ -9,7 +9,7 @@ module.exports = (sequelize, DataTypes) => {
       Permission.belongsTo(models.Service, {
         foreignKey: "serviceId",
       });
-      Permission.belongsTo(models.AccountRoles, {
+      Permission.belongsTo(models.Role, {
         foreignKey: "roleId",
       });
       Permission.belongsTo(models.Feature, {
@@ -23,10 +23,10 @@ module.exports = (sequelize, DataTypes) => {
       serviceId: DataTypes.INTEGER,
       roleId: DataTypes.INTEGER,
       featureId: DataTypes.INTEGER,
-      create: DataTypes.BOOLEAN,
-      read: DataTypes.BOOLEAN,
-      update: DataTypes.BOOLEAN,
-      delete: DataTypes.BOOLEAN,
+      canCreate: DataTypes.BOOLEAN,
+      canRead: DataTypes.BOOLEAN,
+      canUpdate: DataTypes.BOOLEAN,
+      canDelete: DataTypes.BOOLEAN,
     },
     {
       sequelize,

@@ -32,7 +32,7 @@ app.get("/status", (req, res) => {
   });
 });
 
-app.use("/", appMiddleware, routes);
+app.use("/api", appMiddleware, routes);
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);

@@ -23,19 +23,19 @@ module.exports = {
         allowNull: false,
         type: Sequelize.STRING,
       },
-      create: {
+      canCreate: {
         type: Sequelize.BOOLEAN,
         defaultValue: 0,
       },
-      read: {
+      canRead: {
         type: Sequelize.BOOLEAN,
         defaultValue: 0,
       },
-      update: {
+      canUpdate: {
         type: Sequelize.BOOLEAN,
         defaultValue: 0,
       },
-      delete: {
+      canDelete: {
         type: Sequelize.BOOLEAN,
         defaultValue: 0,
       },
