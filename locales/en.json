@@ -6,10 +6,14 @@
   "fieldPasswordIsNotMatch": "Password is and password confirmation is not match.",
   "fieldPasswordLengthMin": "Password minimal 6 characters.",
   "fieldNameIsRequired": "Name is required.",
+  "fieldAddressIsRequired": "Address is required.",
+  "fieldLatIsNotFloat": "Latitude must be a float.",
+  "fieldLonIsNotFloat": "Longitude must be a float.",
   "fieldPhoneNumberIsRequired": "Phone number is required.",
   "fieldPhoneNumberLengthMin": "Phone number minimal 10 characters.",
   "fieldBirthdayIsRequired": "Birthday is required.",
   "fieldDateOfBirthIsNotValid": "Birthday is not valid.",
+  "fieldDescriptionIsRequired": "Description is required.",
   "authAccountNotFound": "Email is not registered!",
   "authInvalidPassword": "The password you entered is incorrect!",
   "authLoginServerError": "There's something wrong during login process!",
@@ -21,5 +25,9 @@
   "authVerificationIsUsed": "Token is already used / Account already verified!.",
   "authVerificationServerError": "There's something wrong during verification process!",
   "authForgotPasswordServerError": "There's something wrong during forgot password process!",
-  "authResetPasswordServerError": "There's something wrong during reset password process!"
+  "authResetPasswordServerError": "There's something wrong during reset password process!",
+  "loadDataServerError": "There's something wrong during loading the data.",
+  "insertDataServerError": "There's something wrong during insert the data.",
+  "updateDataServerError": "There's something wrong during update the data.",
+  "deleteDataServerError": "There's something wrong during delete the data."
 }
