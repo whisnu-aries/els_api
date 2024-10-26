@@ -26,6 +26,7 @@
   "authVerificationServerError": "There's something wrong during verification process!",
   "authForgotPasswordServerError": "There's something wrong during forgot password process!",
   "authResetPasswordServerError": "There's something wrong during reset password process!",
+  "cannotFindData": "Cannot find data.",
   "loadDataServerError": "There's something wrong during loading the data.",
   "insertDataServerError": "There's something wrong during insert the data.",
   "updateDataServerError": "There's something wrong during update the data.",

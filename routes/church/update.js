@@ -35,7 +35,7 @@ router.put("/:uuid", updateChurchValidation, async (req, res) => {
     });
 
     if (!church) {
-      return res.status(404).json({ message: req.__("updateDataServerError") });
+      return res.status(404).json({ message: req.__("loadDataServerError") });
     }
 
     await church.update({

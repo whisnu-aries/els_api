@@ -26,6 +26,7 @@
   "authVerificationServerError": "Terjadi kesalahan dalam proses verifikasi!",
   "authForgotPasswordServerError": "Terjadi kesalahan dalam proses lupa password!",
   "authResetPasswordServerError": "Terjadi kesalahan dalam proses reset password!",
+  "cannotFindData": "Data tidak ditemukan.",
   "loadDataServerError": "Terjadi kesalahan saat mengambil data.",
   "insertDataServerError": "Terjadi kesalahan saat menyimpan data.",
   "updateDataServerError": "Terjadi kesalahan saat mengubah data.",

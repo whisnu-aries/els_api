@@ -21,6 +21,10 @@ router.get("/:key", async (req, res) => {
       },
     });
 
+    if (!church) {
+      return res.status(404).json({ message: req.__("cannotFindData") });
+    }
+
     res.status(200).json({ success: true, church });
   } catch (error) {
     console.error(error);
