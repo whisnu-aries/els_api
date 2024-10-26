@@ -7,8 +7,8 @@ locales.configure({
   defaultLocale: "en",
   cookie: "lang",
   directory: __dirname,
-  autoReload: true,
-  syncFiles: true,
+  autoReload: false,
+  syncFiles: false,
 });
 
 module.exports = locales;
