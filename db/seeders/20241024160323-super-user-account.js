@@ -9,7 +9,7 @@ module.exports = {
       "Accounts",
       [
         {
-          uuid: await uuidV4(),
+          uuid: uuidV4(),
           email: "super_admin@els.id",
           password: await bcrypt.hash("password", 10),
           verifiedAt: new Date(),
@@ -24,7 +24,8 @@ module.exports = {
       [
         {
           accountId: 1,
-          uuid: await uuidV4(),
+          roleId: 1,
+          uuid: uuidV4(),
           name: "Super Admin",
           birthday: new Date(),
           phoneNumber: "081212341234",

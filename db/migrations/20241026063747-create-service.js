@@ -2,54 +2,59 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable("Users", {
+    await queryInterface.createTable("Services", {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER,
       },
-      accountId: {
-        allowNull: false,
-        type: Sequelize.INTEGER,
-      },
-      roleId: {
-        allowNull: false,
-        type: Sequelize.INTEGER,
-      },
       uuid: {
         allowNull: false,
         type: Sequelize.UUID,
+      },
+      churchId: {
+        allowNull: false,
+        type: Sequelize.INTEGER,
+      },
+      slug: {
+        allowNull: false,
+        type: Sequelize.STRING,
+      },
+      icon: {
+        type: Sequelize.STRING,
       },
       name: {
         allowNull: false,
         type: Sequelize.STRING,
       },
-      picture: {
+      location: {
+        allowNull: false,
         type: Sequelize.STRING,
       },
-      birthday: {
+      address: {
+        allowNull: false,
+        type: Sequelize.TEXT,
+      },
+      lat: {
+        allowNull: false,
+        type: Sequelize.FLOAT,
+      },
+      lon: {
+        allowNull: false,
+        type: Sequelize.FLOAT,
+      },
+      startTime: {
         allowNull: false,
         type: Sequelize.DATE,
       },
-      phoneNumber: {
+      endTime: {
         allowNull: false,
-        type: Sequelize.STRING,
-        unique: true,
+        type: Sequelize.DATE,
       },
-      gender: {
-        type: Sequelize.ENUM("Male", "Female"),
-        defaultValue: "Male",
-      },
-      status: {
-        type: Sequelize.ENUM("Single", "Married", "Divorced", "Widowed"),
-        defaultValue: "Single",
-      },
-      address: {
+      description: {
+        allowNull: false,
         type: Sequelize.TEXT,
-      },
-      city: {
-        type: Sequelize.STRING,
       },
       createdAt: {
         allowNull: false,
@@ -62,6 +67,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable("Users");
+    await queryInterface.dropTable("Services");
   },
 };
