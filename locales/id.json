@@ -6,10 +6,14 @@
   "fieldPasswordIsNotMatch": "Password dan konfirmasi password tidak cocok.",
   "fieldPasswordLengthMin": "Password harus minimal 6 karakter.",
   "fieldNameIsRequired": "Nama harus diisi.",
+  "fieldAddressIsRequired": "Alamat harus diisi.",
+  "fieldLatIsNotFloat": "lat harus bertipe data float.",
+  "fieldLonIsNotFloat": "Lon harus bertipe data float.",
   "fieldPhoneNumberIsRequired": "Nomor telepon harus diisi.",
   "fieldPhoneNumberLengthMin": "Nomor telepon minimal 10 karakter.",
   "fieldBirthdayIsRequired": "Tanggal lahir harus diisi.",
   "fieldDateOfBirthIsNotValid": "Tanggal lahir yang diisi tidak valid.",
+  "fieldDescriptionIsRequired": "Keterangan harus diisi.",
   "authAccountNotFound": "Email tidak terdaftar!",
   "authInvalidPassword": "Kata sandi yang Anda masukkan salah!",
   "authLoginServerError": "Terjadi kesalahan dalam proses login!",
@@ -21,5 +25,9 @@
   "authVerificationIsUsed": "Token sudah digunakan / Akun sudah di verifikasi!.",
   "authVerificationServerError": "Terjadi kesalahan dalam proses verifikasi!",
   "authForgotPasswordServerError": "Terjadi kesalahan dalam proses lupa password!",
-  "authResetPasswordServerError": "Terjadi kesalahan dalam proses reset password!"
+  "authResetPasswordServerError": "Terjadi kesalahan dalam proses reset password!",
+  "loadDataServerError": "Terjadi kesalahan saat mengambil data.",
+  "insertDataServerError": "Terjadi kesalahan saat menyimpan data.",
+  "updateDataServerError": "Terjadi kesalahan saat mengubah data.",
+  "deleteDataServerError": "Terjadi kesalahan saat menghapus data."
 }

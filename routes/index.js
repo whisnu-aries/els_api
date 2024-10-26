@@ -1,17 +1,11 @@
 const express = require("express");
 const router = express.Router();
 
-// Import auth routes
-const authRoutes = require("./auth/index");
+const authRoutes = require("./auth");
+const churchRoutes = require("./church");
 
 // Use auth routes
 router.use("/auth", authRoutes);
+router.use("/churches", churchRoutes);
 
 module.exports = router;
-
-// example for using middleware
-// const { appMiddleware } = require("./middleware/index.js");
-
-// app.get("/", appMiddleware, (req, res) => {
-//   res.send("Welcome home!");
-// });
