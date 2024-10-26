@@ -28,7 +28,7 @@ router.post("/", loginValidation, async (req, res) => {
   if (!errors.isEmpty()) {
     const translatedErrors = errors.array().map((err) => ({
       field: err.path,
-      error_msg: req.__(err.msg),
+      message: req.__(err.msg),
     }));
     return res.status(422).json({ errors: translatedErrors });
   }
@@ -42,7 +42,7 @@ router.post("/", loginValidation, async (req, res) => {
     if (!account) {
       return res.status(404).json({
         success: false,
-        error_msg: req.__("authAccountNotFound"),
+        message: req.__("authAccountNotFound"),
       });
     }
 
@@ -50,12 +50,16 @@ router.post("/", loginValidation, async (req, res) => {
     if (!isMatch) {
       return res.status(404).json({
         success: false,
-        error_msg: req.__("authInvalidPassword"),
+        message: req.__("authInvalidPassword"),
       });
     }
 
     const token = jwt.sign(
-      { accountId: account.id, user: account.User.id },
+      {
+        accountId: account.id,
+        userId: account.User.id,
+        roleId: account.User.roleId,
+      },
       process.env.JWT_TOKEN,
       { expiresIn: "30d" }
     );
@@ -65,7 +69,7 @@ router.post("/", loginValidation, async (req, res) => {
     console.error(error);
     return res
       .status(500)
-      .json({ success: false, error_msg: req.__("authLoginServerError") });
+      .json({ success: false, message: req.__("authLoginServerError") });
   }
 });
 

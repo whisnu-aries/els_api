@@ -22,14 +22,14 @@ const resetPasswordValidation = [
 
 router.post("/:token", resetPasswordValidation, async (req, res) => {
   const { password, confirmation_password } = req.body;
-  const token = req.params.token;
+  const { token } = req.params;
   const errors = validationResult(req);
   const transaction = await sequelize.transaction();
 
   if (!errors.isEmpty()) {
     const translatedErrors = errors.array().map((err) => ({
       field: err.path,
-      error_msg: req.__(err.msg),
+      message: req.__(err.msg),
     }));
     return res.status(422).json({ errors: translatedErrors });
   }
@@ -38,7 +38,7 @@ router.post("/:token", resetPasswordValidation, async (req, res) => {
     if (password !== confirmation_password) {
       return res.status(404).json({
         success: false,
-        error_msg: req.__("fieldPasswordIsNotMatch"),
+        message: req.__("fieldPasswordIsNotMatch"),
       });
     }
 
@@ -51,21 +51,21 @@ router.post("/:token", resetPasswordValidation, async (req, res) => {
     if (!request) {
       return res.status(404).json({
         success: false,
-        error_msg: req.__("authRequestNotFound"),
+        message: req.__("authRequestNotFound"),
       });
     }
 
     if (request.usedAt) {
       return res.status(422).json({
         success: false,
-        error_msg: req.__("authVerificationIsUsed"),
+        message: req.__("authVerificationIsUsed"),
       });
     }
 
     if (isNowAfterExpired(request.expiredAt)) {
       return res.status(422).json({
         success: false,
-        error_msg: req.__("authTokenIsExpired"),
+        message: req.__("authTokenIsExpired"),
       });
     }
 
@@ -82,7 +82,7 @@ router.post("/:token", resetPasswordValidation, async (req, res) => {
     await transaction.rollback();
     return res.status(500).json({
       success: false,
-      error_msg: req.__("authResetPasswordServerError"),
+      message: req.__("authResetPasswordServerError"),
     });
   }
 });

@@ -24,7 +24,7 @@ router.post("/", forgotPasswordValidation, async (req, res) => {
   if (!errors.isEmpty()) {
     const translatedErrors = errors.array().map((err) => ({
       field: err.path,
-      error_msg: req.__(err.msg),
+      message: req.__(err.msg),
     }));
     return res.status(422).json({ errors: translatedErrors });
   }
@@ -37,7 +37,7 @@ router.post("/", forgotPasswordValidation, async (req, res) => {
     if (!account) {
       return res.status(404).json({
         success: false,
-        error_msg: req.__("authAccountNotFound"),
+        message: req.__("authAccountNotFound"),
       });
     }
 
@@ -56,7 +56,7 @@ router.post("/", forgotPasswordValidation, async (req, res) => {
     console.error(error);
     return res.status(500).json({
       success: false,
-      error_msg: req.__("authForgotPasswordServerError"),
+      message: req.__("authForgotPasswordServerError"),
     });
   }
 });

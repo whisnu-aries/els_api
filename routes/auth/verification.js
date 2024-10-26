@@ -6,7 +6,7 @@ const { sequelize, Account, AccountVerification } = require("../../db/models");
 const { isNowAfterExpired } = require("../../utils/date_time_utils");
 
 router.get("/:token", async (req, res) => {
-  const token = req.params.token;
+  const { token } = req.params;
   const transaction = await sequelize.transaction();
 
   try {
@@ -19,21 +19,21 @@ router.get("/:token", async (req, res) => {
     if (!verification) {
       return res.status(404).json({
         success: false,
-        error_msg: req.__("authRequestNotFound"),
+        message: req.__("authRequestNotFound"),
       });
     }
 
     if (verification.usedAt || verification.Account.verifiedAt) {
       return res.status(422).json({
         success: false,
-        error_msg: req.__("authVerificationIsUsed"),
+        message: req.__("authVerificationIsUsed"),
       });
     }
 
     if (isNowAfterExpired(verification.expiredAt)) {
       return res.status(422).json({
         success: false,
-        error_msg: req.__("authTokenIsExpired"),
+        message: req.__("authTokenIsExpired"),
       });
     }
 
@@ -50,7 +50,7 @@ router.get("/:token", async (req, res) => {
     await transaction.rollback();
     return res.status(500).json({
       success: false,
-      error_msg: req.__("authVerificationServerError"),
+      message: req.__("authVerificationServerError"),
     });
   }
 });

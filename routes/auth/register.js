@@ -56,7 +56,7 @@ router.post("/", registerValidation, async (req, res) => {
   if (!errors.isEmpty()) {
     const translatedErrors = errors.array().map((err) => ({
       field: err.path,
-      error_msg: req.__(err.msg),
+      message: req.__(err.msg),
     }));
     return res.status(422).json({ errors: translatedErrors });
   }
@@ -65,7 +65,7 @@ router.post("/", registerValidation, async (req, res) => {
     if (password !== confirmation_password) {
       return res.status(404).json({
         success: false,
-        error_msg: req.__("fieldPasswordIsNotMatch"),
+        message: req.__("fieldPasswordIsNotMatch"),
       });
     }
 
@@ -78,7 +78,7 @@ router.post("/", registerValidation, async (req, res) => {
     if (registeredEmail) {
       return res.status(422).json({
         success: false,
-        error_msg: req.__("authRegisterEmailIsRegistered"),
+        message: req.__("authRegisterEmailIsRegistered"),
       });
     }
 
@@ -91,7 +91,7 @@ router.post("/", registerValidation, async (req, res) => {
     if (registeredPhoneNumber) {
       return res.status(422).json({
         success: false,
-        error_msg: req.__("authRegisterPhoneNumberIsRegistered"),
+        message: req.__("authRegisterPhoneNumberIsRegistered"),
       });
     }
 
@@ -131,7 +131,7 @@ router.post("/", registerValidation, async (req, res) => {
     await transaction.rollback();
     return res
       .status(500)
-      .json({ success: false, error_msg: req.__("authRegisterServerError") });
+      .json({ success: false, message: req.__("authRegisterServerError") });
   }
 });
 
