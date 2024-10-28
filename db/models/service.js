@@ -19,8 +19,8 @@ module.exports = (sequelize, DataTypes) => {
       address: DataTypes.TEXT,
       lat: DataTypes.FLOAT,
       lon: DataTypes.FLOAT,
-      startTime: DataTypes.DATE,
-      endTime: DataTypes.DATE,
+      startTime: DataTypes.TIME,
+      endTime: DataTypes.TIME,
       description: DataTypes.TEXT,
     },
     {
