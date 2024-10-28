@@ -36,7 +36,7 @@ router.post("/", insertChurchValidation, async (req, res) => {
     if (church) {
       return res.status(422).json({
         success: false,
-        message: req.__("authRegisterPhoneNumberIsRegistered"),
+        message: req.__("churchAlreadyRegistered"),
       });
     }
 

@@ -5,8 +5,12 @@
   "fieldPasswordRequired": "Password harus diisi.",
   "fieldPasswordIsNotMatch": "Password dan konfirmasi password tidak cocok.",
   "fieldPasswordLengthMin": "Password harus minimal 6 karakter.",
+  "fieldChurchIsRequired": "Gereja harus diisi.",
   "fieldNameIsRequired": "Nama harus diisi.",
+  "fieldLocationIsRequired": "Lokasi harus diisi.",
   "fieldAddressIsRequired": "Alamat harus diisi.",
+  "fieldStartTimeIsRequired": "Waktu mulai harus diisi.",
+  "fieldEndTimeIsRequired": "Waktu berakhir harus diisi.",
   "fieldLatIsNotFloat": "lat harus bertipe data float.",
   "fieldLonIsNotFloat": "Lon harus bertipe data float.",
   "fieldPhoneNumberIsRequired": "Nomor telepon harus diisi.",
@@ -27,8 +31,11 @@
   "authForgotPasswordServerError": "Terjadi kesalahan dalam proses lupa password!",
   "authResetPasswordServerError": "Terjadi kesalahan dalam proses reset password!",
   "cannotFindData": "Data tidak ditemukan.",
+  "cannotFindChurchData": "Data gereja tidak ditemukan.",
   "loadDataServerError": "Terjadi kesalahan saat mengambil data.",
   "insertDataServerError": "Terjadi kesalahan saat menyimpan data.",
   "updateDataServerError": "Terjadi kesalahan saat mengubah data.",
-  "deleteDataServerError": "Terjadi kesalahan saat menghapus data."
+  "deleteDataServerError": "Terjadi kesalahan saat menghapus data.",
+  "churchAlreadyRegistered": "Gereja sudah terdaftar.",
+  "serviceAlreadyRegistered": "Servis sudah terdaftar."
 }

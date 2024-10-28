@@ -5,8 +5,12 @@
   "fieldPasswordRequired": "Password is required.",
   "fieldPasswordIsNotMatch": "Password is and password confirmation is not match.",
   "fieldPasswordLengthMin": "Password minimal 6 characters.",
+  "fieldChurchIsRequired": "Church is required.",
   "fieldNameIsRequired": "Name is required.",
+  "fieldLocationIsRequired": "Location is required.",
   "fieldAddressIsRequired": "Address is required.",
+  "fieldStartTimeIsRequired": "Start time is required.",
+  "fieldEndTimeIsRequired": "End time is required.",
   "fieldLatIsNotFloat": "Latitude must be a float.",
   "fieldLonIsNotFloat": "Longitude must be a float.",
   "fieldPhoneNumberIsRequired": "Phone number is required.",
@@ -27,8 +31,11 @@
   "authForgotPasswordServerError": "There's something wrong during forgot password process!",
   "authResetPasswordServerError": "There's something wrong during reset password process!",
   "cannotFindData": "Cannot find data.",
+  "cannotFindChurchData": "Cannot church find data.",
   "loadDataServerError": "There's something wrong during loading the data.",
   "insertDataServerError": "There's something wrong during insert the data.",
   "updateDataServerError": "There's something wrong during update the data.",
-  "deleteDataServerError": "There's something wrong during delete the data."
+  "deleteDataServerError": "There's something wrong during delete the data.",
+  "churchAlreadyRegistered": "Church already registered.",
+  "serviceAlreadyRegistered": "Service already registered."
 }
