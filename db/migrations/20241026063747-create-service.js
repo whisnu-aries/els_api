@@ -20,6 +20,7 @@ module.exports = {
       slug: {
         allowNull: false,
         type: Sequelize.STRING,
+        unique: true,
       },
       icon: {
         type: Sequelize.STRING,

@@ -2,7 +2,7 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable("Churches", {
+    await queryInterface.createTable("News", {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -13,33 +13,30 @@ module.exports = {
         allowNull: false,
         type: Sequelize.UUID,
       },
+      authorId: {
+        type: Sequelize.INTEGER,
+      },
+      category: {
+        type: Sequelize.ENUM("Service", "Event", "Administration", "Other"),
+      },
+      title: {
+        type: Sequelize.STRING,
+      },
       slug: {
-        allowNull: false,
         type: Sequelize.STRING,
         unique: true,
       },
-      icon: {
+      image: {
         type: Sequelize.STRING,
-      },
-      name: {
-        allowNull: false,
-        type: Sequelize.STRING,
-      },
-      address: {
-        allowNull: false,
-        type: Sequelize.TEXT,
-      },
-      lat: {
-        allowNull: false,
-        type: Sequelize.FLOAT,
-      },
-      lon: {
-        allowNull: false,
-        type: Sequelize.FLOAT,
       },
       description: {
-        allowNull: false,
         type: Sequelize.TEXT,
+      },
+      isPublished: {
+        type: Sequelize.BOOLEAN,
+      },
+      publishedAt: {
+        type: Sequelize.DATE,
       },
       createdAt: {
         allowNull: false,
@@ -52,6 +49,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable("Churches");
+    await queryInterface.dropTable("News");
   },
 };
