@@ -15,7 +15,8 @@ module.exports = {
       serviceId: {
         type: Sequelize.INTEGER,
       },
-      newsIs: {
+      newsId: {
+        allowNull: false,
         type: Sequelize.INTEGER,
       },
       createdAt: {

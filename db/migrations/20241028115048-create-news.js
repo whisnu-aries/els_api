@@ -29,7 +29,7 @@ module.exports = {
       image: {
         type: Sequelize.STRING,
       },
-      description: {
+      content: {
         type: Sequelize.TEXT,
       },
       isPublished: {

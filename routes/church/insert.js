@@ -1,6 +1,6 @@
 const express = require("express");
 const { v4: uuidV4 } = require("uuid");
-var slugify = require("slugify");
+const slugify = require("slugify");
 const { body, validationResult } = require("express-validator");
 const router = express.Router();
 

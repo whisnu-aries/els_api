@@ -1,5 +1,5 @@
 const express = require("express");
-var slugify = require("slugify");
+const slugify = require("slugify");
 const { body, validationResult } = require("express-validator");
 const router = express.Router();
 
