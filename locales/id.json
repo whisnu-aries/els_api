@@ -18,6 +18,9 @@
   "fieldBirthdayIsRequired": "Tanggal lahir harus diisi.",
   "fieldDateOfBirthIsNotValid": "Tanggal lahir yang diisi tidak valid.",
   "fieldDescriptionIsRequired": "Keterangan harus diisi.",
+  "fieldCategoryIsRequired": "Kategori harus diisi.",
+  "fieldTitleIsRequired": "Judul harus diisi.",
+  "fieldContentIsRequired": "Konten harus diisi.",
   "authAccountNotFound": "Email tidak terdaftar!",
   "authInvalidPassword": "Kata sandi yang Anda masukkan salah!",
   "authLoginServerError": "Terjadi kesalahan dalam proses login!",
@@ -32,10 +35,13 @@
   "authResetPasswordServerError": "Terjadi kesalahan dalam proses reset password!",
   "cannotFindData": "Data tidak ditemukan.",
   "cannotFindChurchData": "Data gereja tidak ditemukan.",
+  "cannotFindServiceData": "Data ibadah tidak ditemukan.",
+  "churchOrServiceIsRequired": "Gereja / ibadah harus diisi.",
+  "churchOrServiceIsNotFound": "Gereja / ibadah tidak ditemukan.",
   "loadDataServerError": "Terjadi kesalahan saat mengambil data.",
   "insertDataServerError": "Terjadi kesalahan saat menyimpan data.",
   "updateDataServerError": "Terjadi kesalahan saat mengubah data.",
   "deleteDataServerError": "Terjadi kesalahan saat menghapus data.",
   "churchAlreadyRegistered": "Gereja sudah terdaftar.",
-  "serviceAlreadyRegistered": "Servis sudah terdaftar."
+  "serviceAlreadyRegistered": "Ibadah sudah terdaftar."
 }
